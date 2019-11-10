@@ -13,12 +13,12 @@
 
 import requests
 from bs4 import BeautifulSoup
-page=requests.get('https://www.lpu.in')
-print(page)
+page=requests.get('https://www.google.com/search?client=firefox-b-d&q=lpu')
+#print(page)
 #print(page.text)
 soup=BeautifulSoup(page)
-portfolio=soup.find("div",{"id":"portfolio"})
+portfolio=soup.find("p",{"class":"r"})
 print(portfolio)
-headlines=portfolio.find.all("div",{"class": "entry-title"})
-for heading in headlines:
-        print(heading.find("h2").txt)
+#headlines=portfolio.find.all("div",{"class": "entry-title"})
+#for heading in headlines:
+#        print(heading.find("h2").text)
